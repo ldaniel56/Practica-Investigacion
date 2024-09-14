@@ -21,7 +21,11 @@ namespace WindowsFormsApp1
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            if(MessageBox.Show(this,"¿Esta seguro de salir?","Confirmar", MessageBoxButtons.YesNo,MessageBoxIcon.Information) == DialogResult.Yes)
+            {
+                this.Close();
+            }
+            
         }
 
         private void btnIngresar_Click(object sender, EventArgs e)
